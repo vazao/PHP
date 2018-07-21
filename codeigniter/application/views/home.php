@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
+    <head>            
         <meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="<?php echo base_url();?>bootstrap-4/css/bootstrap.min.css">
         <link href="bootstrap-4/css/formLogin.css" rel="stylesheet"> 
-        <title> Home </title> 
+        <title> HOME </title> 
                 </head>
                 <body>
       <nav class="navbar navbar-default">
