@@ -3,12 +3,13 @@
 	<header>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="<?php echo base_url();?>bootstrap-3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>bootstrap-4/css/bootstrap.min.css">
         <link href="bootstrap-4/css/formLogin.css" rel="stylesheet"> 
   
 		<title>Cadastro de Cliente</title>
 	</header>
 	<body>
+            
             <form action="<?php echo base_url().'Pessoa/salvar'?>" method='post'>
                     
                     <div class="form-group">
@@ -23,15 +24,15 @@
                             <input type="text" name="nome" id="nome">
                             <br/>
                             <br/>
-			<label>Endereco:</label>
+			<label>Endereço:</label>
                             <input type="text" name="endereco" id="endereco">
                             <br/>
                             <br/>
-			<label>Numero:</label>
+			<label>Número:</label>
                             <input type="text" name="numero" id="numero">
                             <br/>
                             <br/>
-			<label>Pais:</label>
+			<label>País:</label>
                             <input type="text" name="pais" id="pais">
                             <br/>
                             <br/>
@@ -60,6 +61,32 @@
                     </div>
 
 		</form>
+            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <td align=center class="success"> ID </td>
+                                            <td align=center class="success"> UF </td>
+                                            <td align=center class="success"> Estado </td>
+                                            <td align=center class="success"> Ações </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        foreach ($listaEstado as $listarEstado) {
+                                            ?>
+                                            <tr>
+                                                <td align=center><?php echo $listarEstado->idEstado ?> </td>
+                                                <td align=center><?php echo $listarEstado->uf ?> </td>
+                                                <td align=center><?php echo $listarEstado->nomeEstado ?> </td>
+                                                <?php
+                                                echo "<td><a href='index.php/estado/deletedata?idEstado=" . $listarEstado->idEstado . "'>Delete</a> ";
+                                                ?>																		
+                                            </tr>		
+                                            <?php
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
 	</body>
         <script src="<?php echo base_url();?>bootstrap-4/js/jquery-3.3.1.slim.min.js"></script>
         <script src="<?php echo base_url();?>bootstrap-4/js/bootstrap.min.js"></script>

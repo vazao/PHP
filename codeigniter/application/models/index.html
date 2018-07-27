@@ -4,7 +4,9 @@
 	<title>403 Forbidden</title>
 </head>
 <body>
-
+$dados['listaEstado'] = $this->Estado_model->get_estados();
+ 
+            $this->load->view('estado', $dados);
 <p>Directory access is forbidden.</p>
 
 </body>
