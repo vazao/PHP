@@ -11,7 +11,8 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('login');
+                $data["pagina"]="login";
+		$this->load->view('Principal', $data);
 	}
         public function salvar () {
            

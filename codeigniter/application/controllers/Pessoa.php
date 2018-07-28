@@ -11,7 +11,8 @@ class Pessoa extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('pessoa');
+                $data["pagina"]="pessoa";
+		$view = $this->load->view('Principal', $data);
 	}
         public function salvar () {
             $documento= $this->input->post ('documento', TRUE);
